@@ -1,0 +1,18 @@
+.App {
+  max-width: 600px;
+  margin: 50px auto;
+  font-family: "Xanh Mono", monospace;
+  border: solid #5f9df7 30px auto;
+}
+
+.btn {
+  background-color: #ff731d;
+}
+
+.Weather {
+  background-color: #fff7e9;
+}
+
+form {
+  color: #5f9df7;
+}
