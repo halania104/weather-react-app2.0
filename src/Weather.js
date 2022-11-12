@@ -1,5 +1,6 @@
 import React from "react";
 import "./Weather.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.css";
 
