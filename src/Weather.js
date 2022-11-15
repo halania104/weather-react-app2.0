@@ -1,14 +1,14 @@
 import React from "react";
 import "./Weather.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import Date from "./Date";
 import "./App.css";
 
 export default function Weather() {
   let weatherData = {
     city: "New York",
     temperature: 19,
-    date: "Tuesday 10:00",
+    date: <Date />,
     description: "Cloudy",
     imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
     humidity: 80,
