@@ -52,14 +52,10 @@ export default function Date() {
   h3.innerHTML = `${hours}:${minutes}`;
 
   //forecast info
-
-  function formatDay(timestamp) {
+  return function formatDay(timestamp) {
     let date = new Date(timestamp * 1000);
     let day = date.getDay();
     let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
     return days[day];
-  }
-  return function formatDay() {
-   
   };
 }
