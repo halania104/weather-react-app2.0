@@ -1,13 +1,10 @@
-import React from "react";
 import "./Weather.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.css";
 
-export default function Date() {
+export default function FormatedDate() {
   let now = new Date();
-
-  let h2 = document.querySelector("h2");
 
   let date = now.getDate();
   let hours = now.getHours();
@@ -19,17 +16,6 @@ export default function Date() {
     minutes = `0${minutes}`;
   }
   let year = now.getFullYear();
-
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  let day = days[now.getDay()]; //0 and 6
 
   let months = [
     "January",
@@ -47,15 +33,14 @@ export default function Date() {
   ];
   let month = months[now.getMonth()]; // 0 and 11
 
-  h2.innerHTML = `${day} :  ${month}, ${date},${year}`;
-  let h3 = document.querySelector("h3");
-  h3.innerHTML = `${hours}:${minutes}`;
-
-  //forecast info
-  return function formatDay(timestamp) {
+  function formatDay(timestamp) {
     let date = new Date(timestamp * 1000);
     let day = date.getDay();
     let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
     return days[day];
-  };
+  }
+
+  return `${formatDay(
+    new Date().getTime()
+  )} :  ${month}, ${date},${year} ${hours}:${minutes}`;
 }
