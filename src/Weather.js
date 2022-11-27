@@ -66,6 +66,11 @@ export default function Weather() {
           </ul>
         </div>
       </div>
+      <footer>
+        <a href="https://github.com/halania104/weather-react-app2.0">
+          Open Source Coded
+        </a>
+      </footer>
     </div>
   );
 }
