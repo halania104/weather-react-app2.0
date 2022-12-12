@@ -35,6 +35,9 @@ export default function Weather() {
             />
           </div>
         </div>
+        <div className="col-3">
+          <btn className="btn btn-primary">Current Location</btn>
+        </div>
       </form>
       <div className="overview">
         <h1>{weatherData.city}</h1>
